@@ -1,4 +1,4 @@
-<img src="https://raw.githubusercontent.com/arinkverma/rpa-draw/main/101010.png" width="100px"/>
+<img src="https://raw.githubusercontent.com/arinkverma/rpa-draw/main/101010.png" width="200px" height="200px"/>
 
 # rpa-draw
 A robot that can draw!
