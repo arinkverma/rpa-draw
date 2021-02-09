@@ -24,22 +24,16 @@ class PaintApp():
         RPA.hotkey(('enter',))
 
     def drawShape(self):
-        side = 400
-        x, y = 100, 200
+        x, y, length = 100, 200, 400
         RPA.moveTo(x, y)
-        while side > 0:
-            side -= 5
-            x += side
+        i = 0
+        sides = [(1, 0), (0, 1), (-1, 0), (0, -1)]
+        while length > 0:
+            x += length * sides[i][0]
+            y += length * sides[i][1]
             RPA.dragTo(x, y)
-            side -= 5
-            y += side
-            RPA.dragTo(x, y)
-            side -= 5
-            x -= side
-            RPA.dragTo(x, y)
-            side -= 5
-            y -= side
-            RPA.dragTo(x, y)
+            length -= 5
+            i = (i+1) % 4
 
     def saveImage(self, fileName):
         RPA.hotkey(('ctrl', 's'))
